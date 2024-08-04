@@ -1,0 +1,23 @@
+[package]
+name    = "libuv"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+readme  = "README.md"
+authors = ["malowebi <malowebit@proton.me>"]
+build   = "build.rs"
+
+[lib]
+name    = "libuv"
+path    = "src/lib.rs"
+test    = true
+doctest = false
+
+[build-dependencies]
+cc      = "1.0"
+bindgen = "0.54"
+
+[dependencies]
+libc      = { version = "0.2" }
+bitflags  = { version = "1.2.1" }
+thiserror = { version = "1.0.61" }
